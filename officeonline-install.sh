@@ -27,6 +27,7 @@ if [[ `id -u` -ne 0 ]] ; then echo "Please run me as root or sudo ./officeonline
 sed -i 's/# deb-src/deb-src/g' $soli
 
 apt-get update && apt-get upgrade -y
+apt-get install sudo -y
 
 apt-get install git libkrb5-dev make openssl apache2 g++ libtool ccache libpng12-0 libpng12-dev libpcap0.8 libpcap0.8-dev libcunit1 libcunit1-dev libpng12-dev libcap-dev libtool m4 automake libcppunit-dev libcppunit-doc pkg-config npm wget nodejs-legacy letsencrypt python-letsencrypt-apache libfontconfig1-dev  -y && sudo apt-get build-dep libreoffice -y
 
